@@ -1,6 +1,6 @@
 #!/usr/bin/env bats
 
-rubie="1.9.3-p327-railsexpress"
+rubie="1.9.3-p545-railsexpress"
 
 load _common
 
