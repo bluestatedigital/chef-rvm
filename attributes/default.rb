@@ -23,6 +23,9 @@
 default['rvm']['default_ruby']      = "ruby-1.9.3-p545"
 default['rvm']['user_default_ruby'] = "ruby-1.9.3-p545"
 
+# rvm ruby that will be used for gem_package resources, needed to move it here bc of https://tickets.opscode.com/browse/CHEF-2903
+default['rvm']['gem_package']['rvm_string'] = node['rvm']['default_ruby']
+
 # list of additional rubies that will be installed
 default['rvm']['rubies']      = []
 default['rvm']['user_rubies'] = []
