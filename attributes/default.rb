@@ -22,13 +22,16 @@
 # ruby that will get installed and set to `rvm use default`.
 default['rvm']['default_ruby']      = "ruby-1.9.3-p545"
 default['rvm']['user_default_ruby'] = "ruby-1.9.3-p545"
+default['rvm']['knife_ruby'] = "ruby-2.5.3"
 
 # rvm ruby that will be used for gem_package resources, needed to move it here bc of https://tickets.opscode.com/browse/CHEF-2903
 default['rvm']['gem_package']['rvm_string'] = node['rvm']['default_ruby']
+default['rvm']['gem_package']['rvm_knife_string'] = node['rvm']['knife_ruby']
 
 # list of additional rubies that will be installed
 default['rvm']['rubies']      = []
 default['rvm']['user_rubies'] = []
+default['rvm']['knife_rubies'] = ['knife-acl']
 
 # list of gems to be installed in global gemset of all rubies
 _global_gems_ = [
