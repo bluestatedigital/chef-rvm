@@ -31,7 +31,7 @@ default['rvm']['gem_package']['rvm_knife_string'] = node['rvm']['knife_ruby']
 # list of additional rubies that will be installed
 default['rvm']['rubies']      = []
 default['rvm']['user_rubies'] = []
-default['rvm']['knife_rubies'] = ['knife-acl']
+default['rvm']['knife_rubies'] = %w{knife-acl knife-supermarket}
 
 # list of gems to be installed in global gemset of all rubies
 _global_gems_ = [
