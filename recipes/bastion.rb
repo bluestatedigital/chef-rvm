@@ -32,7 +32,7 @@ node['rvm']['gems'] = {
 
 if perform_install_rubies
   install_rubies  :rubies => node['rvm']['rubies'],
-                  :default_ruby => node['rvm']['knife_ruby'],
+                  :default_ruby => node['rvm']['default_ruby'],
                   :global_gems => node['rvm']['global_gems'],
                   :gems => node['rvm']['gems']
 end
