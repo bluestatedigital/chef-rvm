@@ -24,8 +24,10 @@ perform_install_rubies  = node['rvm']['install_rubies'] == true ||
 
 node['rvm']['gems'] = {
     'ruby-2.5.3' =>[
+        {'name' => 'chef'},
         {'name' => 'knife-acl'},
-        {'name' => 'knife-supermarket'}
+        {'name' => 'knife-supermarket'},
+        {'name' => 'rest-client'}
     ]
 }
 
