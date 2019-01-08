@@ -24,15 +24,17 @@ perform_install_rubies  = node['rvm']['install_rubies'] == true ||
 
 node['rvm']['gems'] = {
     'ruby-2.5.3' =>[
+        {'name' => 'chef'},
         {'name' => 'knife-acl'},
-        {'name' => 'knife-supermarket'}
+        {'name' => 'knife-supermarket'},
+        {'name' => 'rest-client'}
     ]
 }
 
 
 if perform_install_rubies
   install_rubies  :rubies => node['rvm']['rubies'],
-                  :default_ruby => node['rvm']['knife_ruby'],
+                  :default_ruby => node['rvm']['default_ruby'],
                   :global_gems => node['rvm']['global_gems'],
                   :gems => node['rvm']['gems']
 end
